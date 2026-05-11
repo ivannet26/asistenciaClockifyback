@@ -9,7 +9,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
-        <exec.mainClass>com.mycompany.asistencia.api.AsistenciaApi</exec.mainClass>
+        <exec.mainClass>com.gmingenieros.asistencia.utils.ConnectionDB</exec.mainClass>
         
     </properties>
     <dependencies>
@@ -46,7 +46,7 @@
             <artifactId>exec-maven-plugin</artifactId>
             <version>3.1.0</version>
             <configuration>
-                <mainClass>com.mycompany.asistencia.api.AsistenciaApi</mainClass>
+                <mainClass>com.gmingenieros.asistencia.utils.ConnectionDB</mainClass>
             </configuration>
         </plugin>
     </plugins>

@@ -9,7 +9,7 @@
                 <goal>org.codehaus.mojo:exec-maven-plugin:3.1.0:java</goal>
             </goals>
             <properties>
-                <exec.mainClass>com.mycompany.asistencia.api.AsistenciaApi</exec.mainClass>
+                <exec.mainClass>com.gmingenieros.asistencia.utils.ConnectionDB</exec.mainClass>
             </properties>
         </action>
     </actions>
