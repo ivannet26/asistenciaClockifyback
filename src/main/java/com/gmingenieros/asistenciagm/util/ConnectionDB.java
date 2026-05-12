@@ -1,4 +1,4 @@
-package com.gmingenieros.asistencia.utils;
+package com.gmingenieros.asistenciagm.util;
 
 import java.sql.Connection; 
 import java.sql.DriverManager;
