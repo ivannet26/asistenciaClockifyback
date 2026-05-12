@@ -1,4 +1,5 @@
 package com.gmingenieros.asistenciagm.constant;
+import io.github.cdimascio.dotenv.Dotenv;
 
 /**
  * Constantes globales del sistema AsistenciaGM.
@@ -9,11 +10,13 @@ public final class Constantes {
     private Constantes() { }
 
     // ── Base de datos ───────────────────────────────────────────────────
-    public static final String DB_HOST     = "tu-host.aivencloud.com";
-    public static final int    DB_PORT     = 3306;
-    public static final String DB_NAME     = "asistenciaGM";
-    public static final String DB_USER     = "tu_usuario";
-    public static final String DB_PASSWORD = "tu_password";
+    private static final Dotenv dotenv = Dotenv.load();
+
+    public static final String DB_HOST     = dotenv.get("DB_HOST");
+    public static final int    DB_PORT     = Integer.parseInt(dotenv.get("DB_PORT"));
+    public static final String DB_NAME     = dotenv.get("DB_NAME");
+    public static final String DB_USER     = dotenv.get("DB_USER");
+    public static final String DB_PASSWORD = dotenv.get("DB_PASSWORD");
     public static final String DB_URL      = String.format(
         "jdbc:mysql://%s:%d/%s?useSSL=true&requireSSL=true"
         + "&serverTimezone=America/Lima&characterEncoding=UTF-8",

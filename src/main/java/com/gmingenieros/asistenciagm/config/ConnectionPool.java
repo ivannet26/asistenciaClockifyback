@@ -67,7 +67,7 @@ public final class ConnectionPool {
      * espera hasta {@code POOL_TIMEOUT} ms.
      *
      * @return conexión lista para usar
-     * @throws ConexionException si no se puede obtener una conexión
+     * @throws ConnectionException si no se puede obtener una conexión
      */
     public synchronized Connection obtener() {
         long inicio = System.currentTimeMillis();
